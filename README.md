@@ -67,6 +67,18 @@ Example: This is the scene of the crime.
 Example: I love the scenes in that movie.
 Reference: https://hinative.com/en-US/questions/80505
 
+### Module Extensions Usage Guideline
+
+In order to prevent massive module extension, before writing anything under this folder, please read this guideline first.
+
+This module extensions purpose is to help to "share the loading" of presenter, wireframe, and some UI action logical.
+
+Therefore, you will only consider add code in module extensions under below princinple:
+
+1. Coding in here, if presenter, wireframe's logic relate to the UIKit. Because excluded the VIew, other role play should independent from UIKit in order to do the Unit Test.
+2. Coding in here, if it relate the Presenter's present other view, or Wireframe show action. 
+3. Coding in here, if some code logic is more custom to specific use case, which it does not have to declare in the protocol. Then you can implement in here.
+
 #### Note:
 ZX's supplementary explanation, using the <u>underline</u> to hightlight. <br>
 \* sign means it is the core idea about Clean Swift.
